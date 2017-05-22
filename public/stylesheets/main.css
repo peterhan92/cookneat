@@ -6,6 +6,7 @@ body {
   margin: 0 0 25px;
 }
 footer {
+	background: rgb(246, 246, 246);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -40,9 +41,16 @@ img.preview {
 .row.new>h1 {
 	text-align: center;
 }
-.row>.form {
+.row.recipe>.form {
 	width: 80%;
 	margin: 50px auto;
 }
+.row.form2>.form {
+	width: 30%;
+	margin: 25px auto;
+}
 
-
+/*footer*/
+.love {
+	margin-top: 0.75%;
+}

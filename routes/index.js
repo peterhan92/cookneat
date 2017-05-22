@@ -53,7 +53,7 @@ router
 	// logout
 	.get("/logout", function(req, res) {
 		req.logout();
-		req.flash("success", "Successfully Logged out");
+		req.flash("error", "Successfully Logged out");
 		res.redirect("/recipes");
 	})
 

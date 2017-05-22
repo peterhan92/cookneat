@@ -19,8 +19,18 @@
 					<p>Prep Time: <%= recipe.prepTime %></p>
 					<p>Cook Time: <%= recipe.cookTime %></p>
 					<p>Serving: <%= recipe.serving %></p>
-					<p>Ingredients: <%= recipe.ingredient %></p>
-					<p>Directions: <%= recipe.direction %></p>
+					<p>Ingredients:</p>
+					<ul>
+						<% recipe.ingredient.split("\r").forEach(function(e) { %>
+							<li><%= e %></li>
+						<% }) %>
+					</ul>
+					<p>Directions:</p>
+					<ol>
+						<% recipe.direction.split("\r").forEach(function(e) { %>
+							<li><%= e %></li>
+						<% }) %>
+					</ol>
 					<p>
 						<em>Submitted By <%= recipe.author.username %></em>
 					</p>

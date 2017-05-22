@@ -12,7 +12,6 @@ const express = require("express"),
 			Recipes = require("./models/recipe"),
 			Comment = require("./models/comment"),
 			User = require("./models/user"),
-			seedDB = require("./seeds"),
 			// requiring routes
 			recipesRoutes = require("./routes/recipes"),
 			commentsRoutes = require("./routes/comments"),
