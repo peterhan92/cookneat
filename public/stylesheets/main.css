@@ -17,7 +17,7 @@ textarea {
 }
 /* Index Page*/
 img.preview {
-	max-height: 185px;
+	height: 185px;
 	width: 250px;
 }
 /* Show Page*/
