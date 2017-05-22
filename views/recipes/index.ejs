@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<header class="jumbotron">
+	<div class="container">
+		<h1>Welcome to Cook n Eat!</h1>
+		<p>View our hand-picked recipes from all over the world</p>
+		<p>
+			<a class="btn btn-primary btn-large" href="/recipes/new">Add New Recipe</a>
+		</p>
+	</div>
+</header>
+
+<div class="row recipes text-center">
+	<% recipes.forEach(function(recipe) { %>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail">
+				<img class="preview" src="<%= recipe.image %>">
+				<div class="caption">
+					<h4><%= recipe.title %></h4>
+				</div>
+				<p>
+					<a href="/recipes/<%= recipe._id %>" class="btn btn-primary">More Info</a>
+				</p>
+			</div>
+		</div>
+	<% })%>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,48 @@
+html {
+  position: relative;
+  min-height: 100%
+}
+body {
+  margin: 0 0 25px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 10px;
+}
+textarea {
+	resize: none;
+}
+/* Index Page*/
+img.preview {
+	max-height: 185px;
+	width: 250px;
+}
+/* Show Page*/
+.thumbnail {
+	padding: 0;
+}
+.thumbnail img {
+	width: 100%;
+}
+.thumbnail .caption-full {
+	padding: 9px;
+}
+.row.recipes {
+	display: flex;
+	flex-wrap: wrap;
+}
+.delete {
+	display: inline;
+}
+/* New Page*/
+.row.new>h1 {
+	text-align: center;
+}
+.row>.form {
+	width: 80%;
+	margin: 50px auto;
+}
+
+
