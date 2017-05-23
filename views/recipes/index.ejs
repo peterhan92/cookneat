@@ -2,31 +2,37 @@
 
 <header class="jumbotron">
 	<div class="container">
-		<h1>Welcome to Cook n Eat!</h1>
-		<p>View our hand-picked recipes from all over the world</p>
-		<p>
-			<a class="btn btn-primary btn-large" href="/recipes/new">Add New Recipe</a>
-		</p>
-    <form action="/recipes" method="GET" id="recipe-search">
-      <div class="form-group">
-        <input class="form-control" type="text" name="search" placeholder="Search Recipe">
-      </div>
-    </form>
+		<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Welcome to Cook n Eat!</h1>
+		<p>View our recipes from all over the world</p>
+		<div class="row">
+			<div class="col-md-2">
+				<p>
+					<a class="btn btn-primary" href="/recipes/new">Add New Recipe</a>
+				</p>
+			</div>
+			<div class="col-md-10">
+				<form action="/recipes" method="GET" id="recipe-search">
+		      <div class="form-group">
+		        <input class="form-control" type="text" name="search" placeholder="Search Recipe">
+		      </div>
+		    </form>
+			</div>
+	  </div>
 	</div>
 </header>
 
-<div class="row recipes text-center" id="recipe-grid">
+<div class="row recipes" id="recipe-grid">
 	<% recipes.forEach(function(recipe) { %>
-		<div class="col-sm-6 col-md-3">
-			<div class="thumbnail">
-				<img class="preview" src="<%= recipe.image %>">
-				<div class="caption">
-					<h4><%= recipe.title %></h4>
+		<div class="col-sm-6 col-md-4">
+			<a href="/recipes/<%= recipe._id %>">
+				<div class="thumbnail">
+					<img class="preview" src="<%= recipe.image %>">
+					<div class="caption">
+						<p class="thumbnail-title"><%= recipe.title %></p>
+						<p class="thumbnail-username"><%= recipe.author.username %></p>
+					</div>
 				</div>
-				<p>
-					<a href="/recipes/<%= recipe._id %>" class="btn btn-primary">More Info</a>
-				</p>
-			</div>
+			</a>
 		</div>
 	<% })%>
 </div>

@@ -3,7 +3,8 @@ html {
   min-height: 100%
 }
 body {
-  margin-bottom: 60px
+  margin-bottom: 5%;
+  font-family: 'Roboto', sans-serif;
 }
 textarea {
 	resize: none;
@@ -15,13 +16,22 @@ footer {
   width: 100%;
 	height: 60px;
 }
+a {
+	text-decoration: none!important;
+}
 /* Index Page*/
 img.preview {
-	height: 185px;
+	height: 250px;
 	width: 250px;
 }
+.thumbnail .caption {
+	padding-bottom: 0;
+}
 #recipe-search {
-	width: 50%;
+	width: 69%;
+}
+.thumbnail-title {
+	font-size: 2rem;
 }
 /* Show Page*/
 .thumbnail {
