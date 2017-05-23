@@ -27,12 +27,11 @@ app
 		cookie: {maxAge: 180 * 60 * 1000}
 	}))
 
-// PASSPORT CONFIGURATION
 mongoose.Promise = global.Promise;
 var url = process.env.DATABASEURL || "mongodb://localhost/cook-n-eat";
 mongoose.connect(url);
 
-// seedDB(); // <==== seeding the database
+// PASSPORT CONFIGURATION
 app
 	.use(passport.initialize())
 	.use(passport.session())

@@ -7,10 +7,15 @@
 		<p>
 			<a class="btn btn-primary btn-large" href="/recipes/new">Add New Recipe</a>
 		</p>
+    <form action="/recipes" method="GET" id="recipe-search">
+      <div class="form-group">
+        <input class="form-control" type="text" name="search" placeholder="Search Recipe">
+      </div>
+    </form>
 	</div>
 </header>
 
-<div class="row recipes text-center">
+<div class="row recipes text-center" id="recipe-grid">
 	<% recipes.forEach(function(recipe) { %>
 		<div class="col-sm-6 col-md-3">
 			<div class="thumbnail">

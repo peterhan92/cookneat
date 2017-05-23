@@ -7,13 +7,30 @@ router
 	// INDEX
 	.get("/", middleware.savePath, function(req, res) {
 		// Get all recipes from DB
-		Recipe.find({}, function(err, allRecipes) {
-			if (err) {
-				console.log(err);
-			} else {
-				res.render("recipes/index", {recipes: allRecipes});
-			}
-		})
+		if(req.query.search && req.xhr) {
+      const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+      // Get all recipes from DB
+      Recipe.find({title: regex}, function(err, allRecipes){
+         if(err){
+            console.log(err);
+         } else {
+            res.status(200).json(allRecipes);
+         }
+      });
+	  } else {
+	      // Get all recipes from DB
+	      Recipe.find({}, function(err, allRecipes){
+	         if(err){
+	             console.log(err);
+	         } else {
+	            if(req.xhr) {
+	              res.json(allRecipes);
+	            } else {
+	              res.render("recipes/index",{recipes: allRecipes, page: 'recipes'});
+	            }
+	         }
+	      });
+	  }
 	})
 	// CREATE
 	.post("/", middleware.isLoggedIn ,function(req, res) {
@@ -98,5 +115,9 @@ router
 			}
 		})
 	})
+
+function escapeRegex(text) {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}
 
 module.exports = router;

@@ -5,20 +5,23 @@ html {
 body {
   margin: 0 0 25px;
 }
+textarea {
+	resize: none;
+}
 footer {
-	background: rgb(246, 246, 246);
+	background: rgb(245, 245, 245);
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 10px;
-}
-textarea {
-	resize: none;
+	height: 60px;
 }
 /* Index Page*/
 img.preview {
 	height: 185px;
 	width: 250px;
+}
+#recipe-search {
+	width: 50%;
 }
 /* Show Page*/
 .thumbnail {
@@ -51,6 +54,9 @@ img.preview {
 }
 
 /*footer*/
+footer>.container {
+	margin-top: 0.8%;
+}
 .love {
 	margin-top: 0.75%;
 }
