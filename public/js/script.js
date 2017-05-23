@@ -7,17 +7,17 @@ $('#recipe-search').on('input', function() {
     $('#recipe-grid').html('');
     data.forEach(function(recipe) {
       $('#recipe-grid').append(`
-        <div class="col-sm-6 col-md-3">
-					<div class="thumbnail">
-						<img class="preview" src="${ recipe.image }">
-						<div class="caption">
-							<h4>${ recipe.title }</h4>
-						</div>
-						<p>
-							<a href="/recipes/${ recipe._id }" class="btn btn-primary">More Info</a>
-						</p>
+        <div class="col-sm-6 col-md-4">
+			<a href="/recipes/${ recipe._id }">
+				<div class="thumbnail">
+					<img class="preview" src="${ recipe.image }">
+					<div class="caption">
+						<p class="thumbnail-title">${ recipe.title }</p>
+						<p class="thumbnail-username">${ recipe.author.username }</p>
 					</div>
 				</div>
+			</a>
+		</div>
       `);
     });
   });
