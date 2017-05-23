@@ -3,7 +3,7 @@ html {
   min-height: 100%
 }
 body {
-  margin: 0 0 25px;
+  margin-bottom: 60px
 }
 textarea {
 	resize: none;
@@ -55,8 +55,8 @@ img.preview {
 
 /*footer*/
 footer>.container {
-	margin-top: 0.8%;
+	margin-top: 1.4%;
 }
 .love {
-	margin-top: 0.75%;
+	float: right;
 }
