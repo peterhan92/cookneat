@@ -50,22 +50,22 @@ h1 {
 
 .slideshow li:nth-child(2) {
 	background-image: url(../images/img-2.jpeg);
-	animation-delay: 10s;
+	animation-delay: 7s;
 }
 
 .slideshow li:nth-child(3) {
 	background-image: url(../images/img-3.jpg);
-	animation-delay: 20s;
+	animation-delay: 14s;
 }
 
 .slideshow li:nth-child(4) {
 	background-image: url(../images/img-4.jpg);
-	animation-delay: 30s;
+	animation-delay: 21s;
 }
 
 .slideshow li:nth-child(5) {
 	background-image: url(../images/img-5.jpg);
-	animation-delay: 40s;
+	animation-delay: 28s;
 }
 
 @keyframes imageAnimation {

@@ -3,11 +3,11 @@
 <header class="jumbotron">
 	<div class="container">
 		<h1><i class="fa fa-cutlery" aria-hidden="true"></i> Welcome to Cook n Eat!</h1>
-		<p>View our recipes from all over the world</p>
+		<p>View submitted recipes from all over the world</p>
 		<div class="row">
 			<div class="col-md-2">
 				<p>
-					<a class="btn btn-primary" href="/recipes/new">Add New Recipe</a>
+					<a class="btn btn-success" href="/recipes/new">Add New Recipe</a>
 				</p>
 			</div>
 			<div class="col-md-10">
@@ -29,7 +29,7 @@
 					<img class="preview" src="<%= recipe.image %>">
 					<div class="caption">
 						<p class="thumbnail-title"><%= recipe.title %></p>
-						<p class="thumbnail-username"><%= recipe.author.username %></p>
+						<p class="thumbnail-username"><span class="grey-text">Recipe by</span> <%= recipe.author.username %></p>
 					</div>
 				</div>
 			</a>

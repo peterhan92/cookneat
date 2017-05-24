@@ -13,8 +13,8 @@
 		<div class="col-md-9">
 			<div class="thumbnail">
 				<div class="caption-full">
-					<h4><a href="#"><%= recipe.title %></a></h4>
-					<p><%= recipe.description %></p>
+					<p id="show-title"><%= recipe.title %></p>
+					<p>"<%= recipe.description %>"</p>
 					<img class="img-responsive" src="<%= recipe.image %>" alt="">
 					<p>Prep Time: <%= recipe.prepTime %></p>
 					<p>Cook Time: <%= recipe.cookTime %></p>
@@ -32,7 +32,7 @@
 						<% }) %>
 					</ol>
 					<p>
-						<em>Submitted By <%= recipe.author.username %></em>
+						<em>Recipe by <%= recipe.author.username %></em>
 					</p>
 					<% if (currentUser && recipe.author.id.equals(currentUser._id)) { %>
 					<a class="btn btn-xs btn-warning" href="/recipes/<%= recipe._id %>/edit">Edit</a>

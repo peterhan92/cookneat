@@ -21,7 +21,7 @@ a {
 }
 /* Index Page*/
 img.preview {
-	height: 250px;
+	height: 275px;
 	width: 250px;
 }
 .thumbnail .caption {
@@ -32,6 +32,12 @@ img.preview {
 }
 .thumbnail-title {
 	font-size: 2rem;
+}
+.thumbnail-username {
+	font-size: 1.25rem;
+}
+.grey-text {
+	color: rgb(108, 108, 108);
 }
 /* Show Page*/
 .thumbnail {
@@ -49,6 +55,9 @@ img.preview {
 }
 .delete {
 	display: inline;
+}
+#show-title {
+	font-size: 4rem;
 }
 /* New Page*/
 .row.new>h1 {
